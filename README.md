@@ -1,1 +1,1 @@
-https://github.com/ruttojumala/ono-tebe-nado.git
+https://github.com/ruttojumala/ono-tebe-nado
