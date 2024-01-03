@@ -1,6 +1,4 @@
 /* место для вашего кода */
-@import "fonts/fonts.css";
-@import "global.css";
 
 .header {
   padding: 92px 24px;
@@ -11,33 +9,34 @@
   letter-spacing: 0.18px;
 }
 
-.header__menu{
+.header__menu {
   margin: auto;
   width: 100%;
   height: 100%;
 }
 
+/* оставлен левый внутренний отступ, т.к. gap не создает отступа в самом начале контейнера */
+
 .header__links-list {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
   align-items: center;
   list-style: circle;
   padding-left: 25px;
-  padding-right: 35px;
 }
 
 .header__links-list-item_no-bullit {
   list-style: none;
 }
 
-.header__link_active {
-  text-decoration: none;
-}
-
 .header__link {
   text-decoration: none;
   border-bottom: 1px solid #000;;
+}
+
+.header__link_active {
+  border-bottom: none;
 }
 
 .header__logo-link {
@@ -55,6 +54,11 @@
   font-style: normal;
 }
 
+.address__link {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
 .header__address {
   margin: auto 0px auto 184px;
 }
@@ -66,7 +70,7 @@
   text-transform: uppercase;
   color: #FFF;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .overlay {
@@ -75,7 +79,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 }
 
 .cover__title {
@@ -86,7 +90,7 @@
   font-weight: 700;
   letter-spacing: 30px;
   position: relative; 
-  z-index: 1;
+  z-index: 2;
 }
 
 .aligned-text {
@@ -101,12 +105,12 @@
   text-align: end;
 }
 
-.letter-spacing-extended { 
-  letter-spacing: 60px; 
+.letter-spacing-extended {
+  letter-spacing: 60px;
 }
 
 .no-letter-spacing {
-  letter-spacing: 0px; 
+  letter-spacing: 0; 
 }
 
 .cover__description {
@@ -116,7 +120,7 @@
   white-space: nowrap;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .cover__description-text {
@@ -169,7 +173,7 @@ word-spacing: 18px;
   text-decoration: none;
   height: 100%;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .card {
@@ -178,24 +182,20 @@ word-spacing: 18px;
   justify-content: space-between;
   height: 100%;
   padding: 51px 40px 48px;
+  background-size: cover;
+  background-position: center;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover; 
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover; 
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover; 
-  background-position: center;
 }
 
 .card__title {
@@ -206,7 +206,7 @@ word-spacing: 18px;
   text-decoration-line: underline;
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .card__text {
@@ -215,7 +215,7 @@ word-spacing: 18px;
   font-weight: 400;
   line-height: 120%;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .lots__look-more-link {
@@ -277,12 +277,12 @@ word-spacing: 18px;
 .footer {
   padding: 0px 50px 88px;
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   font-size: 18px;
   font-weight: 400;
 }
 
-.footer__menu{
+.footer__menu {
   margin: auto;
   width: 100%;
   height: 100%;
@@ -290,7 +290,7 @@ word-spacing: 18px;
 
 .footer__menu-link {
   text-decoration: none;
-  border-bottom: 1px solid #000;;
+  border-bottom: 1px solid #000;
 }
 
 .footer__menu-list {
@@ -302,7 +302,7 @@ word-spacing: 18px;
 }
 
 .footer__menu-link_active {
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .footer__social-list {
@@ -312,12 +312,11 @@ word-spacing: 18px;
   list-style: none;
 }
 
-.footer__social-list-item{
-  max-width: 48px;
+.footer__social-list-item {
   max-width: 48px;
 }
 
-.footer__social-link{
+.footer__social-link {
   display: block;
   text-decoration: none;
   height: 100%;
