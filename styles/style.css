@@ -65,7 +65,7 @@
 
 .cover {
   background-image: url(../images/cover.jpg);
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   text-transform: uppercase;
   color: #FFF;
@@ -89,7 +89,7 @@
   font-size: 100px;
   font-weight: 700;
   letter-spacing: 30px;
-  position: relative; 
+  position: relative;
   z-index: 2;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .no-letter-spacing {
-  letter-spacing: 0; 
+  letter-spacing: 0;
 }
 
 .cover__description {
