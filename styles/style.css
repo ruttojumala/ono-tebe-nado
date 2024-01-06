@@ -313,6 +313,7 @@ word-spacing: 18px;
 }
 
 .footer__social-list-item {
+  min-width: 48px;
   max-width: 48px;
 }
 
